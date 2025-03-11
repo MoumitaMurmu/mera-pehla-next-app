@@ -1,0 +1,23 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: azure;
+  color: black;
+  list-style-type: none;
+}
+
+.logo {
+  /* border: 1px solid blue; */
+  padding: 10px;
+}
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: black;
+  list-style-type: none;
+  /* border: 1px solid blue; */
+  padding: 10px;
+  width: 200px;
+}
