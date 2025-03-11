@@ -3,7 +3,7 @@ import './style.css'
 const SignUp = () =>{
     return(
         <div className="container">
-            <h1>Sign Up Karo</h1>
+            <h1>Sign Up</h1>
          <form>
           <label>Username:</label>
           <input type="text" name="username" required/>
