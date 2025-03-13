@@ -1,0 +1,17 @@
+**Folder structure of Nextjs project**
+Project structure and organization:
+
+Top-level Folders => src, app, pages, public
+ye sab top level folder hai and ye application ke code ko manage karte hai.
+
+Top Level Files :
+like : 
+
+next.config.mjs => Configuration file for Next.js
+
+Routing Files :
+
+
+Plan to create modal context and then show the signin, signup, and forgot password pages in the modal context.
+
+
