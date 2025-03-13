@@ -1,36 +1,22 @@
 // "use client" used to make server component into a client component
-"use client"
+"use client";
 
-import { useState } from "react";
+import { useContext} from "react";
 import "./navbar.css";
 import Link from "next/link";
 import CommonModal from "../modals/CommonModal";
-
-
+import { ModalContext } from "@/context/ModalContext";
+import Login from "../signup-signin/Login";
 
 const Navbar = () => {
-
-  // state to track modal value
-  const[isModalOpen, setIsModalOpen] = useState(false);
-
-
-
-  const openModal = () => {
-    setIsModalOpen(true);
-  }
-
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  }
-
+  const { isModalOpen, openModal } = useContext(ModalContext);
 
   return (
     <div className="navbar">
       <div className="logo">
         <Link href="/">Logo</Link>
       </div>
-      
+
       <ul>
         <li>
           <Link href="/about">About</Link>
@@ -39,17 +25,13 @@ const Navbar = () => {
           <Link href="/contact">Contact</Link>
         </li>
         <li>
-          <button onClick={openModal}>Login</button>
+          <button onClick={() => openModal(<Login/>)}>Login</button>
         </li>
       </ul>
 
       {/* Yahan pe Modal Dikhega */}
 
-      {
-        isModalOpen && (
-          <CommonModal isModalOpen={isModalOpen} closeModal={closeModal}/>
-        )
-      }
+      {isModalOpen && <CommonModal />}
     </div>
   );
 };

@@ -1,21 +1,13 @@
-"use client";
-
-import { ModalContext } from "@/context/ModalContext";
 import "./style.css";
-import Login from "./Login";
-import { useContext } from "react";
 
-const SignUp = () => {
-  const { openModal } = useContext(ModalContext);
-
+const ForgotPassword = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
   }
 
-
   return (
     <div className="container">
-      <h1>Sign Up</h1>
+      <h1>Forgot Password</h1>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="email">Email:</label>
@@ -27,7 +19,6 @@ const SignUp = () => {
             required
           />
         </div>
-
         <div className="form-group">
           <label htmlFor="password">Password:</label>
           <input
@@ -51,19 +42,11 @@ const SignUp = () => {
         </div>
 
         <div className="form-actions">
-          <button type="submit">Sign Up</button>
+          <button type="submit">Submit</button>
         </div>
       </form>
-      <div className="login-section">
-        <p>
-          Already have an account?{" "}
-          <button type="button" onClick={() => openModal(<Login />)}>
-            Login
-          </button>
-        </p>
-      </div>
     </div>
   );
 };
 
-export default SignUp;
+export default ForgotPassword;
