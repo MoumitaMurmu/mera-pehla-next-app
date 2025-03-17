@@ -15,10 +15,11 @@ const SignUp = () => {
 
   return (
     <div className="container">
-      <h1>Sign Up</h1>
+      <h2>Sign Up</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="email">Email:</label>
+          <br/>
           <input
             type="email"
             id="email"
@@ -30,6 +31,7 @@ const SignUp = () => {
 
         <div className="form-group">
           <label htmlFor="password">Password:</label>
+          <br/>
           <input
             type="password"
             id="password"
@@ -41,6 +43,7 @@ const SignUp = () => {
 
         <div className="form-group">
           <label htmlFor="confirmPassword">Confirm Password:</label>
+          <br/>
           <input
             type="password"
             id="confirmPassword"
@@ -57,9 +60,9 @@ const SignUp = () => {
       <div className="login-section">
         <p>
           Already have an account?{" "}
-          <button type="button" onClick={() => openModal(<Login />)}>
+          <span onClick={() => openModal(<Login />)}>
             Login
-          </button>
+          </span>
         </p>
       </div>
     </div>

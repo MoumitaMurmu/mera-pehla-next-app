@@ -17,10 +17,11 @@ const Login = () => {
   }
   return (
     <div className="container">
-      <h1>Login To Your Account</h1>
+      <h2>Login To Your Account</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="email">Email:</label>
+          <br/>
           <input
             type="email"
             id="email"
@@ -32,6 +33,7 @@ const Login = () => {
 
         <div className="form-group">
           <label htmlFor="password">Password:</label>
+          <br/>
           <input
             type="password"
             id="password"
@@ -41,25 +43,26 @@ const Login = () => {
           />
         </div>
 
-        <div className="form-sections">
+        <div className="forgot-password">
+        <p>
+          Forgot Password?{" "}
+          <span onClick={() => openModal(<ForgotPassword />)}>
+            Reset Password
+          </span>
+        </p>
+      </div>
+        <div className="form-actions">
           <button type="submit">Login</button>
         </div>
       </form>
-      <div className="forgot-password">
-        <p>
-          Forgot Password ?{" "}
-          <button type="button" onClick={() => openModal(<ForgotPassword />)}>
-            Reset Password
-          </button>
-        </p>
-      </div>
+     
 
       <div className="signup-section">
         <p>
-          New User? Click here to{" "}
-          <button type="button" onClick={() => openModal(<SignUp />)}>
+          Don't have an account?{" "}
+          <span onClick={() => openModal(<SignUp />)}>
             Sign Up
-          </button>
+          </span>
         </p>
       </div>
     </div>

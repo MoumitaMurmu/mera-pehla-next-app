@@ -1,6 +1,6 @@
 .modal{
   position: fixed; 
-  z-index: 1; 
+  z-index: 1000 !important; 
   padding-top: 100px; 
   right: 0;
   top: 0;
@@ -9,6 +9,7 @@
   overflow: auto; 
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.4); 
+  border: 1px solid yellow;
 
 }
 
@@ -16,7 +17,7 @@
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
-   border: 1px solid #888;   
+   
    width: 30%;
 }
 

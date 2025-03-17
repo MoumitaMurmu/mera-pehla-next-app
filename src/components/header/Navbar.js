@@ -25,7 +25,7 @@ const Navbar = () => {
           <Link href="/contact">Contact</Link>
         </li>
         <li>
-          <button onClick={() => openModal(<Login/>)}>Login</button>
+          <button type="button" onClick={() => openModal(<Login/>)}>Login</button>
         </li>
       </ul>
 

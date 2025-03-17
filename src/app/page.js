@@ -2,7 +2,7 @@
 const page = () => {
   return(
     <>
-    <h3>Welcome TO The President World!</h3>
+    <h3>Welcome TO NextJs</h3>
     
     </>
   )

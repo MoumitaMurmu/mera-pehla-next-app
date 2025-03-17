@@ -1,23 +1,43 @@
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: azure;
-  color: black;
-  list-style-type: none;
+  /* background-color: azure; */
+ 
+  background-color: transparent;
+
 }
 
 .logo {
-  /* border: 1px solid blue; */
+ 
   padding: 10px;
 }
 .navbar ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  color: black;
+  color: white;
   list-style-type: none;
-  /* border: 1px solid blue; */
+  font-size: 16px;
   padding: 10px;
   width: 200px;
+  text-decoration: none;
+}
+
+.navbar button{
+  background: none;
+  cursor: pointer;
+  border: none;
+  color: green;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.navbar button:hover{
+  color: white;
 }
