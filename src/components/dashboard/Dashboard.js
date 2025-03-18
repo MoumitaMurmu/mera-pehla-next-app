@@ -1,11 +1,19 @@
+const Dashboard = async () => {
+  const myData = await fetch("https://jsonplaceholder.typicode.com/users");
+  const users = await myData.json();
 
-
-const Dashboard = () => {
   return (
     <div>
-      <h2>Welcome To Dashboard Page.</h2>
+      <h2>User Details</h2>
+      <div>
+        <ul>
+          {users.map((user) => (
+            <li key={user.id}>{user.name}</li>
+          ))}
+        </ul>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;
