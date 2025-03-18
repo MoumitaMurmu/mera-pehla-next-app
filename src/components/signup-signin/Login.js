@@ -5,23 +5,25 @@ import "./style.css";
 import { ModalContext } from "@/context/ModalContext";
 import SignUp from "./SignUp";
 import ForgotPassword from "./ForgotPassword";
-
-
-
+import { useRouter } from "next/navigation";
 
 const Login = () => {
-  const { openModal } = useContext(ModalContext);
+  const { openModal, closeModal } = useContext(ModalContext);
+
+  const router = useRouter();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  }
+    router.push("/dashboard");
+    closeModal();
+  };
   return (
     <div className="container">
       <h2>Login To Your Account</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="email">Email:</label>
-          <br/>
+          <br />
           <input
             type="email"
             id="email"
@@ -33,7 +35,7 @@ const Login = () => {
 
         <div className="form-group">
           <label htmlFor="password">Password:</label>
-          <br/>
+          <br />
           <input
             type="password"
             id="password"
@@ -44,25 +46,22 @@ const Login = () => {
         </div>
 
         <div className="forgot-password">
-        <p>
-          Forgot Password?{" "}
-          <span onClick={() => openModal(<ForgotPassword />)}>
-            Reset Password
-          </span>
-        </p>
-      </div>
+          <p>
+            Forgot Password?{" "}
+            <span onClick={() => openModal(<ForgotPassword />)}>
+              Reset Password
+            </span>
+          </p>
+        </div>
         <div className="form-actions">
           <button type="submit">Login</button>
         </div>
       </form>
-     
 
       <div className="signup-section">
         <p>
           Don't have an account?{" "}
-          <span onClick={() => openModal(<SignUp />)}>
-            Sign Up
-          </span>
+          <span onClick={() => openModal(<SignUp />)}>Sign Up</span>
         </p>
       </div>
     </div>
