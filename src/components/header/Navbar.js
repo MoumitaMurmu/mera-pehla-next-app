@@ -2,19 +2,22 @@
 "use client";
 
 import { useContext } from "react";
-import "./navbar.css";
+
 import Link from "next/link";
 import CommonModal from "../modals/CommonModal";
 import { ModalContext } from "@/context/ModalContext";
 import Login from "../signup-signin/Login";
 import Image from "next/image";
 import logo from "../../../public/n-logo.webp";
+
+import styles from "./navbar.module.css"
+
 const Navbar = () => {
   const { isModalOpen, openModal } = useContext(ModalContext);
 
   return (
-    <div className="navbar">
-      <div className="logo">
+    <div className={styles.navbar}>
+      <div className={styles.logo}>
         <Link href="/">
           <Image src={logo} alt="website logo" width={40} placeholder="blur"/>
         </Link>

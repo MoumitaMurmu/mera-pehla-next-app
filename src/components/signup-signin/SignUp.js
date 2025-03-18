@@ -1,9 +1,11 @@
 "use client";
 
 import { ModalContext } from "@/context/ModalContext";
-import "./style.css";
+
 import Login from "./Login";
+import styles from "./form.module.css";
 import { useContext } from "react";
+
 
 const SignUp = () => {
   const { openModal } = useContext(ModalContext);
@@ -14,10 +16,10 @@ const SignUp = () => {
 
 
   return (
-    <div className="container">
+    <div className={styles.container}>
       <h2>Sign Up</h2>
       <form onSubmit={handleSubmit}>
-        <div className="form-group">
+        <div className={styles.formGroup}>
           <label htmlFor="email">Email:</label>
           <br/>
           <input
@@ -29,7 +31,7 @@ const SignUp = () => {
           />
         </div>
 
-        <div className="form-group">
+        <div className={styles.formGroup}>
           <label htmlFor="password">Password:</label>
           <br/>
           <input
@@ -41,7 +43,7 @@ const SignUp = () => {
           />
         </div>
 
-        <div className="form-group">
+        <div className={styles.formGroup}>
           <label htmlFor="confirmPassword">Confirm Password:</label>
           <br/>
           <input
@@ -53,11 +55,11 @@ const SignUp = () => {
           />
         </div>
 
-        <div className="form-actions">
+        <div className={styles.formActions}>
           <button type="submit">Sign Up</button>
         </div>
       </form>
-      <div className="login-section">
+      <div className="loginSection">
         <p>
           Already have an account?{" "}
           <span onClick={() => openModal(<Login />)}>

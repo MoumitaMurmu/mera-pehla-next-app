@@ -22,7 +22,7 @@
 
 
 
-.container .form-group input{
+.container .formGroup input{
     width: 300px;
     padding: 5px;
     border: 1px solid #d4d4d4;
@@ -30,7 +30,7 @@
 }
 
 
-.container .form-actions button{
+.container .formActions button{
     width: 180px;
     padding: 5px;
     background-color: #0367ff;
@@ -40,7 +40,7 @@
     cursor: pointer;
 }
 
-.container .form-actions button:hover{
+.container .formActions button:hover{
     background-color: #0257b5;
 }
 .container p{

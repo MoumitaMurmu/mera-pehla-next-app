@@ -1,7 +1,7 @@
 "use client";
 import { useContext } from "react";
-import Login from "../signup-signin/Login";
-import "./style.css";
+import styles from "./modal.module.css"
+
 import { ModalContext } from "@/context/ModalContext";
 
 const CommonModal = () => {
@@ -9,13 +9,13 @@ const CommonModal = () => {
 
   return (
     // The Modal
-    <div className="modal">
+    <div className={styles.modal}>
       {/* Modal Content */}
-      <div className="modal-content">
-        <span className="close" onClick={closeModal}>
+      <div className={styles.modalContent}>
+        <span className={styles.close} onClick={closeModal}>
           &times;
         </span>
-        {/* <Login /> */}
+       
         {modalContent}
       </div>
     </div>

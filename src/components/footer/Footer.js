@@ -1,12 +1,12 @@
 import React from "react";
-import "./style.css";
+import styles from "./footer.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../../../public/papay-logo.png"
 const Footer = () => {
   return (
-    <div className="footer">
-      <div className="footer_menu">
+    <div className={styles.footer}>
+      <div className={styles.footerMenu}>
         <ul>
           <li>
             <Link href="/product">Product</Link>

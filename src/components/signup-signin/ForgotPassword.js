@@ -1,4 +1,4 @@
-import "./style.css";
+import styles from "./form.module.css"
 
 const ForgotPassword = () => {
   const handleSubmit = (e) => {
@@ -6,10 +6,10 @@ const ForgotPassword = () => {
   }
 
   return (
-    <div className="container">
+    <div className={styles.container}>
       <h2>Reset Password</h2>
       <form onSubmit={handleSubmit}>
-        <div className="form-group">
+        <div className={styles.formGroup}>
           <label htmlFor="email">Email:</label>
           <br/>
           <input
@@ -20,7 +20,7 @@ const ForgotPassword = () => {
             required
           />
         </div>
-        <div className="form-group">
+        <div className={styles.formGroup}>
           <label htmlFor="password">Password:</label>
           <br/>
           <input
@@ -32,7 +32,7 @@ const ForgotPassword = () => {
           />
         </div>
 
-        <div className="form-group">
+        <div className={styles.formGroup}>
           <label htmlFor="confirmPassword">Confirm Password:</label>
           <br/>
           <input
@@ -44,7 +44,7 @@ const ForgotPassword = () => {
           />
         </div>
 
-        <div className="form-actions">
+        <div className={styles.formActions}>
           <button type="submit">Submit</button>
         </div>
       </form>
