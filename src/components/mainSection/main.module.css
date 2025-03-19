@@ -1,0 +1,21 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    gap: 5px;
+
+}
+
+.main button{
+    background-color: blueviolet;
+    border: none;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.main button:hover{
+    background-color: blue;
+}

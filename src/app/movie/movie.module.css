@@ -1,0 +1,24 @@
+
+
+.movieMain {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Wrap hone de taaki next row pe aaye */
+    justify-content: flex-start; /* Left se start hoga */
+    align-items: stretch; /* Sab cards same height ke honge */
+    gap: 20px; /* Cards ke beech ka gap */
+    width: 100%;
+    max-width: 1000px; /* Max width de diya taaki behtar dikhe */
+    margin: auto; /* Center align ho container */
+  }
+  
+  

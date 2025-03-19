@@ -19,23 +19,32 @@ const Navbar = () => {
     <div className={styles.navbar}>
       <div className={styles.logo}>
         <Link href="/">
-          <Image src={logo} alt="website logo" width={40} placeholder="blur"/>
+          <Image src={logo} alt="website logo" width={40} height={40} placeholder="blur"/>
         </Link>
       </div>
 
-      <ul>
+     <div className={styles.rightNavMenu}>
+     <ul>
+     <li>
+          <Link href="/">Home</Link>
+        </li>
         <li>
           <Link href="/about">About</Link>
+        </li>
+        
+        <li>
+          <Link href="/movie">Movie</Link>
         </li>
         <li>
           <Link href="/contact">Contact</Link>
         </li>
-        <li>
+        {/* <li>
           <button type="button" onClick={() => openModal(<Login />)}>
             Login
           </button>
-        </li>
+        </li> */}
       </ul>
+     </div>
 
       {/* Yahan pe Modal Dikhega */}
 
